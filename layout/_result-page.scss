@@ -1,0 +1,28 @@
+.result {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__card {
+    min-width: 50%;
+    margin: 60px auto;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: $card-shadow;
+    text-align: center;
+
+    h1 {
+      color: $primary-color;
+    }
+
+    p {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
