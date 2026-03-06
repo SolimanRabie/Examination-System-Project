@@ -1,0 +1,13 @@
+.change {
+  display: flex;
+  &__markQ {
+    margin: 60px auto;
+    margin-left: 0;
+    padding: 10px;
+    background-color: #fff3cd;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 10%;
+    // display: none; /* hide by default */
+  }
+}

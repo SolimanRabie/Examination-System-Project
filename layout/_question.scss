@@ -1,0 +1,37 @@
+.question {
+  &__qc {
+    color: $text-main;
+    // margin-bottom: 25px;
+    margin: 20px 0 25px 10px;
+    background-color: $bg-light;
+    font-size: 22px;
+    font-weight: 600px;
+  }
+
+  &__form-check {
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &:hover {
+      background-color: #f8f9fa;
+      border-color: #0d6efd;
+    }
+  }
+
+  &__buttons {
+    margin: 35px 0;
+    display: flex;
+    justify-content: space-evenly;
+    .btn {
+      padding: 8px 20px;
+      border-radius: 30px;
+      margin: 10px 0;
+    }
+  }
+}
