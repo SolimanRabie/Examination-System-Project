@@ -8,10 +8,14 @@
 // Layout
 @import "./layout/departments";
 @import "./layout/header";
-
+@import "./layout/question";
+@import "./layout/progress";
+// @import "./layout/mark-section";
+@import "./layout/q-section";
+@import "./layout/_change";
+@import "./layout/result-page";
 // components
 @import "./components/btns"; // Pages
-@import "./components/titles";
-@import "./components/card-icon";
+
 @import "./components/contact-icon";
 // Themes
