@@ -90,10 +90,3 @@
   display: flex;
   justify-content: space-evenly;
 }
-
-btn-main {
-  background: #1a237e !important;
-  border-radius: 8px !important;
-  border: none;
-}
-}
