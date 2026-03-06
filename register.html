@@ -11,7 +11,7 @@
     <body class="bg-light">
 
     <div class="container d-flex justify-content-center align-items-center vh-100">
-        <!-- .auth-card: كلاس مخصص لتنسيق الصندوق في Sass -->
+
         <div class="card auth-card shadow-sm p-4">
             <div class="text-center mb-4">
                 <h3 class="fw-bold">Registration</h3>
@@ -24,37 +24,42 @@
                         <label for="first-name" class="form-label small fw-bold">First Name</label>
                     
                         <input type="text" class="form-control custom-input" id="first-name" placeholder="Enter first name">
-                        <div class="text-danger small d-none" id="fname-error">Letters only, please.</div>
+                        <div class="text-danger small d-none" id="fname-error">please enter valid first name</div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="last-name" class="form-label small fw-bold">Last Name</label>
                         <input type="text" class="form-control custom-input" id="last-name" placeholder="Enter last name">
+                        <div class="text-danger small d-none" id="lname-error">please enter avalid name</div>
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="email-address" class="form-label small fw-bold">Email Address</label>
                     <input type="email" class="form-control custom-input" id="email-address" placeholder="name@example.com">
+                    <div class="text-danger small d-none" id="email-error">please enter a valid email </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="password" class="form-label small fw-bold">Password</label>
                     <input type="password" class="form-control custom-input" id="password" placeholder="Min. 8 characters">
+                    <div class="text-danger small d-none" id="password-error">password should be at least 8 character</div>
                 </div>
 
                 <div class="mb-4">
                     <label for="confirm-password" class="form-label small fw-bold">Re-enter Password</label>
                     <input type="password" class="form-control custom-input" id="confirm-password" placeholder="Repeat password">
+                    <div class="text-danger small d-none" id="repassword-error"> didn't match password</div> 
                 </div>
 
         
-                <button type="submit" class="btn btn-primary btn-main w-100">Register</button>
+                <button type="submit" class="btn btn-primary btn-main w-100">Sign Up</button>
 
                 <p class="text-center mt-3 small">
-                    Already have an account? <a href="index.html" class="text-decoration-none">Sign in here</a>
+                    Already have an account? <a href="login.html" class="text-decoration-none">Sign in here</a>
                 </p>
             </form>
         </div>
     </div>
+    <script src="register.js"></script>
     </body>
 </html>
