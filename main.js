@@ -1,11 +1,12 @@
-export class Question {
-  constructor(text, choices, correct) {
-    this.text = text;
-    this.choices = choices;
-    this.correct = correct;
-  }
+import { Question } from "./Question.js";
+import { Exam } from "./Exam.js";
 
-  checkAnswer(answerIndex) {
-    return answerIndex === this.correct;
-  }
-}
+const questions = [
+  new Question("What is your fav color?", ["Red", "Blue", "Green", "Black"], 1),
+
+  new Question("2 + 2 = ?", ["2", "3", "4", "5"], 2),
+
+  new Question("Best JS runtime?", ["Node", "Deno", "Bun", "All"], 3),
+];
+
+const exam = new Exam(questions);
