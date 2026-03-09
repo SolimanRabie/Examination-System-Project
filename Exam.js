@@ -27,8 +27,21 @@ export class Exam {
   }
 
   markQuestion() {
-    if (!this.marked.includes(this.currentIndex)) {
-      this.marked.push(this.currentIndex);
+    // if (!this.marked.includes(this.currentIndex)) {
+    //   this.marked.push(this.currentIndex);
+    // }
+    // if(this.marked.length!==0){
+
+    // }
+
+    const index = this.currentIndex;
+    const pos = this.marked.indexOf(index); // return 1 if exist and return -1 if not exist
+
+    if (pos !== -1) {
+      // remove mark
+      this.marked.splice(pos, 1);
+    } else {
+      this.marked.push(index);
     }
   }
 

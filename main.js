@@ -1,6 +1,6 @@
 import { Question } from "./Question.js";
 import { Exam } from "./Exam.js";
-
+import { UI } from "./UI.js";
 const questions = [
   new Question("What is your fav color?", ["Red", "Blue", "Green", "Black"], 1),
 
@@ -10,3 +10,8 @@ const questions = [
 ];
 
 const exam = new Exam(questions);
+const ui = new UI(exam);
+
+ui.renderQuestion();
+ui.events();
+ui.renderMark();
