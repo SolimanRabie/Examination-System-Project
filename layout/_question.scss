@@ -25,7 +25,7 @@
   }
 
   &__buttons {
-    margin: 35px 0;
+    margin: 35px 0 0 0;
     display: flex;
     justify-content: space-evenly;
     .btn {
@@ -33,5 +33,13 @@
       border-radius: 30px;
       margin: 10px 0;
     }
+  }
+  &__submit {
+    margin-top: 5px;
+  }
+  .submit {
+    width: 92%;
+    font-size: 18px;
+    padding: 10px;
   }
 }

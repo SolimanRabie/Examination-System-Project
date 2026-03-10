@@ -13,7 +13,7 @@ export class UI {
     this.markContainer = document.querySelector(".change__markQ");
     this.submitBtn = document.querySelector(".submit");
     this.timeElement = document.getElementById("time");
-    this.time = 60;
+    this.time = 300;
   }
 
   renderQuestion() {
@@ -101,7 +101,9 @@ export class UI {
       div.textContent = `Question ${index + 1}`;
       div.classList.add("marked-question");
       ///
+      div.style.cursor = "pointer";
       div.addEventListener("click", () => {
+        this.exam.currentIndex = index;
         this.renderQuestion();
       });
       this.markContainer.appendChild(div);
@@ -110,10 +112,17 @@ export class UI {
 
   startTimer() {
     const interval = setInterval(() => {
-      this.time--;
-      this.timeElement.textContent = this.time;
+      const minutes = Math.floor(this.time / 60);
+      const seconds = this.time % 60;
 
-      if (this.time <= 0) {
+      this.timeElement.textContent = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+      // this.timeElement.style.color = "red";
+      if (this.time <= 60) {
+        document.querySelector(".timer").classList.add("warning");
+      }
+      this.time--;
+
+      if (this.time < 0) {
         clearInterval(interval);
         this.goResult();
       }

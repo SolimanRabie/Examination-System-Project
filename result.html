@@ -16,16 +16,30 @@
     <div class="result">
       <div class="result__card">
         <h1>Exam Result</h1>
-        <p id="studentName">soliman Rabie</p>
+        <p id="studentName"></p>
         <p id="studentScore">45 <span class="fullScore">/ 50</span></p>
 
         <div class="result__card__buttons">
-          <button type="button" class="btn btn-primary">Retry</button>
-          <button type="button" class="btn btn-primary">Home</button>
+          <button type="button" id="retryBtn" class="btn btn-primary">
+            Retry
+          </button>
+          <button type="button" id="homeBtn" class="btn btn-primary">
+            Home
+          </button>
         </div>
       </div>
     </div>
     <script>
+      // result page
+      document.getElementById("retryBtn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      document.getElementById("homeBtn").addEventListener("click", () => {
+        window.location.href = "login.html";
+      });
+
+      //
       const params = new URLSearchParams(window.location.search);
       const score = params.get("score");
 

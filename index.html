@@ -12,25 +12,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <style>
-    .submit-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-    }
-
-    .submit {
-      position: fixed;
-      bottom: 20px;
-      right: 40px;
-      width: 150px;
-      font-size: 18px;
-    }
-
-    /*  */
-
-    /*  */
-  </style>
+  <style></style>
   <body>
     <div class="container-fluid">
       <!-- timer -->
@@ -48,8 +30,8 @@
         >
           <div class="progress-bar" style="width: 25%"></div>
         </div>
+        <div class="prog__timer">Remaining Time: <span id="time"></span></div>
       </div>
-      <div class="timer">Time Left: <span id="time">60</span> sec</div>
       <div class="change">
         <div class="qsec">
           <!-- question section -->
@@ -119,15 +101,16 @@
                 Next
               </button>
             </div>
+            <div class="question__submit">
+              <button class="btn btn-success submit">Submit Exam</button>
+            </div>
           </div>
         </div>
         <!-- mark section -->
         <div class="change__markQ"></div>
       </div>
     </div>
-    <div class="submit-container">
-      <button class="btn btn-lg btn-success submit">Submit Exam</button>
-    </div>
+
     <script type="module" src="main.js"></script>
   </body>
 </html>

@@ -10,5 +10,17 @@
     font-size: 14px;
     width: 10%;
     // display: none; /* hide by default */
+    div {
+      background-color: black;
+      color: white;
+      font-weight: 700;
+      margin: 10px;
+    }
   }
+}
+.marked-question {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  margin: 10px;
 }
