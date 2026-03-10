@@ -46,6 +46,8 @@ export class Exam {
   }
 
   getProgress() {
-    return ((this.currentIndex + 1) / this.questions.length) * 100;
+    // return ((this.currentIndex + 1) / this.questions.length) * 100;
+    const answer = this.answers.filter((a) => a !== null).length;
+    return (answer / this.questions.length) * 100;
   }
 }

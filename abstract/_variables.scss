@@ -4,20 +4,16 @@ $success-color: #198754; // الأخضر لعلامة النجاح في صفحة
 $error-color: #dc3545; // الأحمر لرسائل التحذير والخطأ في المدخلات
 $warning-color: #ffc107; // اللون الأصفر لرسائل التنبيه
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-//  ألوان الخلفية والنصوص 
-$bg-light:         #f8f9fa; // الرمادي الفاتح جداً وحقول الإدخال
-$card-bg:          #ffffff; // اللون الأبيض النقي للصناديق (Cards)
-$text-main:        #212529; // الأسود المريح للعين للنصوص الأساسية
-$text-muted:       #6c757d;  // نصوص فرعية 
-//الخطوط 
-$font-main:        'Noto Sans', sans-serif;
-$font-size-base:   16px;
- // radius
-=======
-=======
->>>>>>> ac0b0b210c06a44eed57395c9f432cb11d88cac3
+//  ألوان الخلفية والنصوص
+$bg-light: #f8f9fa; // الرمادي الفاتح جداً وحقول الإدخال
+$card-bg: #ffffff; // اللون الأبيض النقي للصناديق (Cards)
+$text-main: #212529; // الأسود المريح للعين للنصوص الأساسية
+$text-muted: #6c757d; // نصوص فرعية
+//الخطوط
+$font-main: "Noto Sans", sans-serif;
+$font-size-base: 16px;
+// radius
+
 //  ألوان الخلفية والنصوص
 $bg-light: #f8f9fa; // الرمادي الفاتح جداً وحقول الإدخال
 $card-bg: #ffffff; // اللون الأبيض النقي للصناديق (Cards)
@@ -36,10 +32,7 @@ $text-muted: #6c757d; // نصوص فرعية
 $font-main: "Noto Sans", sans-serif;
 $font-size-base: 16px;
 // radius
-<<<<<<< HEAD
->>>>>>> 39c90622a483e172ef40beb5bc9aeb2fc4aa521b
-=======
->>>>>>> ac0b0b210c06a44eed57395c9f432cb11d88cac3
+
 $border-radius-sm: 4px;
 $border-radius-md: 8px;
 $border-radius-lg: 15px;

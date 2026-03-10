@@ -11,6 +11,9 @@ export class UI {
 
     this.progress = document.querySelector(".progress-bar");
     this.markContainer = document.querySelector(".change__markQ");
+    this.submitBtn = document.querySelector(".submit");
+    this.timeElement = document.getElementById("time");
+    this.time = 60;
   }
 
   renderQuestion() {
@@ -29,6 +32,12 @@ export class UI {
       // }
     });
     this.updateProgress();
+
+    if (this.exam.currentIndex === 0) {
+      this.previousBtn.style.display = "none";
+    } else {
+      this.previousBtn.style.display = "inline-block";
+    }
   }
 
   updateProgress() {
@@ -60,8 +69,22 @@ export class UI {
       this.exam.markQuestion();
       this.renderMark();
     });
+
+    // submit
+    this.submitBtn.addEventListener("click", () => {
+      this.goResult();
+    });
   }
 
+  goResult() {
+    let score = 0;
+    this.exam.questions.forEach((q, i) => {
+      if (q.checkAnswer(this.exam.answers[i])) {
+        score++;
+      }
+    });
+    window.location.href = `result.html?score= ${score}`;
+  }
   // mark view
   renderMark() {
     this.markContainer.innerHTML = "";
@@ -83,5 +106,17 @@ export class UI {
       });
       this.markContainer.appendChild(div);
     });
+  }
+
+  startTimer() {
+    const interval = setInterval(() => {
+      this.time--;
+      this.timeElement.textContent = this.time;
+
+      if (this.time <= 0) {
+        clearInterval(interval);
+        this.goResult();
+      }
+    }, 1000);
   }
 }
