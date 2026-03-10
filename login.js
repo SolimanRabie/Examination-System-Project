@@ -23,7 +23,7 @@ else{
     //message2.textContent = "Login success";
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("currentUser", JSON.stringify(user));
-window.location.href="test.html";
+window.location.href="index.html";
 }
 
 });
